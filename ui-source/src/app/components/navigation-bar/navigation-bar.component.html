@@ -1,0 +1,19 @@
+<nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand" style="margin-left: 20px;" [routerLink]="['/']">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarToggleExternalContent" style="margin-right: 20px;">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+        <ul class="navbar-nav text-center">
+            <li class="nav-item">
+                <a class="nav-link link-light" [routerLink]="['/customer']" data-bs-toggle="collapse"
+                data-bs-target="#navbarToggleExternalContent">Request a booking</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-light" [routerLink]="['/owner']" data-bs-toggle="collapse"
+                data-bs-target="#navbarToggleExternalContent">View all bookings</a>
+            </li>
+        </ul>
+    </div>
+</nav>

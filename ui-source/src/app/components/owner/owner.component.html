@@ -1,0 +1,25 @@
+<h1 class="text-center">Booking List</h1>
+<div class="card mx-auto" style="width: 50%;">
+    <div class="card-body">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Customer name</th>
+                    <th scope="col">Table size</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let booking of bookingList">
+                    <tr>
+                        <td>{{booking.name}}</td>
+                        <td>{{booking.size}}</td>
+                        <td>{{booking.date}}</td>
+                        <td>{{booking.time}}</td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+</div>

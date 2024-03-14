@@ -1,0 +1,53 @@
+<h1 class="text-center">Request a booking</h1>
+<div class="card mx-auto" style="width: 50%;">
+    <div class="card-body">
+        <form [formGroup]="requestBookingForm" (ngSubmit)="createBooking()">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <label>Customer name: </label>
+                        <input type="text" class="form-control" formControlName="name"
+                            placeholder="Enter customer name">
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-12">
+                        <label>Table size: </label>
+                        <input type="number" class="form-control" formControlName="size" placeholder="Enter table size">
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-12">
+                        <label>Date: </label>
+                        <mat-form-field>
+                            <input matInput [min]="minDate" [matDatepicker]="datepicker" placeholder="Select a date" formControlName="date">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matSuffix [for]="datepicker">
+                                <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                            </mat-datepicker-toggle>
+                            <mat-datepicker #datepicker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label>Time: </label>
+                        <mat-form-field>
+                            <input matInput type="time" min="09:00" max="18:00" formControlName="time">                        
+                        </mat-form-field>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-12">
+                        <button type="reset" class="btn btn-warning mr-1">Reset</button>
+                        <button type="submit" [disabled]="!requestBookingForm.valid" class="btn btn-primary">Request
+                            booking</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
